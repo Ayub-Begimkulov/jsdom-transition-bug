@@ -19,4 +19,9 @@ const jsdom = new JSDOM(`<!DOCTYPE html>
 const { window } = jsdom;
 const el = window.document.querySelector(".test");
 const styles = window.getComputedStyle(el);
-console.log(styles.transitionDelay, styles.transitionDuration);
+console.log(
+  styles.transitionProperty,
+  styles.transitionDuration,
+  styles.transitionDelay,
+  styles.transitionTimingFunction
+);
